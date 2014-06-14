@@ -4,9 +4,9 @@ window.requestAnimationFrame(function () {
 
   // TODO: This code is in need of a refactor (along with the rest)
   var storage     = new LocalStorageManager;
-  var noticeClose = document.querySelector(".notice-close-button");
+  //var noticeClose = document.querySelector(".notice-close-button");
   var notice      = document.querySelector(".app-notice");
-  if (storage.getNoticeClosed()) {
+  /*if (storage.getNoticeClosed()) {
     notice.parentNode.removeChild(notice);
   } else {
     noticeClose.addEventListener("click", function () {
@@ -15,4 +15,5 @@ window.requestAnimationFrame(function () {
       ga("send", "event", "notice", "closed");
     });
   }
+  */
 });

@@ -398,7 +398,13 @@ hr {
   .tile.tile-2 .tile-inner {
     background-image: url('../resources/img/grunt.jpeg');
     background-repeat: no-repeat;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); 
+  }
+  .tile.tile-2:hover .tile-inner:hover{
+    -webkit-animation: zoomin 400ms ease 200ms;
+    -moz-animation: zoomin 400ms ease 200ms;
+    animation: zoomin 400ms ease 200ms;
+  }
   .tile.tile-4 .tile-inner {
     background: #ede0c8;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
@@ -513,9 +519,9 @@ hr {
     transform: scale(0); }
 
   50% {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    transform: scale(1.2); }
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    transform: scale(2); }
 
   100% {
     -webkit-transform: scale(1);
@@ -528,9 +534,9 @@ hr {
     transform: scale(0); }
 
   50% {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    transform: scale(1.2); }
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    transform: scale(2); }
 
   100% {
     -webkit-transform: scale(1);
@@ -543,19 +549,50 @@ hr {
     transform: scale(0); }
 
   50% {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    transform: scale(1.2); }
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    transform: scale(2); }
 
   100% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); } }
+
+
+ @-webkit-keyframes zoomin {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    transform: scale(2); } }
+@-moz-keyframes zoomin {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); }
+
+  100% {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    transform: scale(2); } }
+@keyframes zoomin {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    transform: scale(2); } }
+       
 .tile-merged .tile-inner {
   z-index: 20;
-  -webkit-animation: pop 200ms ease 100ms;
-  -moz-animation: pop 200ms ease 100ms;
-  animation: pop 200ms ease 100ms;
+  -webkit-animation: pop 400ms ease 100ms;
+  -moz-animation: pop 400ms ease 100ms;
+  animation: pop 400ms ease 100ms;
   -webkit-animation-fill-mode: backwards;
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
