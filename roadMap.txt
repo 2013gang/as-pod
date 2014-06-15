@@ -1,0 +1,4 @@
+1. tile hover zoom in
+2. merge pop in, all other tiles seperate out to make enough space
+3. left panel instruction map
+4. right panel cute conversation
