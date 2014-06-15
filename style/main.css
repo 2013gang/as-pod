@@ -322,7 +322,8 @@ hr {
 .tile, .tile .tile-inner {
   width: 107px;
   height: 107px;
-  line-height: 116.25px; }
+  line-height: 116.25px; 
+  overflow: hidden;}
 .tile.tile-position-1-1 {
   -webkit-transform: translate(0px, 0px);
   -moz-transform: translate(0px, 0px);
@@ -623,9 +624,9 @@ hr {
        
 .tile-merged .tile-inner {
   z-index: 20;
-  -webkit-animation: pop 400ms ease 100ms;
-  -moz-animation: pop 400ms ease 100ms;
-  animation: pop 400ms ease 100ms;
+  -webkit-animation: pop 500ms ease 100ms;
+  -moz-animation: pop 500ms ease 100ms;
+  animation: pop 500ms ease 100ms;
   -webkit-animation-fill-mode: backwards;
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards; 
