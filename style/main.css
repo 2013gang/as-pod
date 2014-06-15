@@ -10,6 +10,14 @@ html, body {
 body {
   margin: 80px 0; }
 
+.left-panel {
+  float: left;
+}
+
+.right-panel {
+  float: right;
+}
+
 input {
   display: inline-block;
   background: #8f7a66;
@@ -394,16 +402,13 @@ hr {
     text-align: center;
     font-weight: bold;
     z-index: 10;
-    font-size: 55px; }
+    font-size: 55px; 
+  }
+
   .tile.tile-2 .tile-inner {
     background-image: url('../resources/img/grunt.jpeg');
     background-repeat: no-repeat;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); 
-  }
-  .tile.tile-2:hover .tile-inner:hover{
-    -webkit-animation: zoomin 400ms ease 200ms;
-    -moz-animation: zoomin 400ms ease 200ms;
-    animation: zoomin 400ms ease 200ms;
   }
   .tile.tile-4 .tile-inner {
     background: #ede0c8;
@@ -504,6 +509,7 @@ hr {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); } }
+
 .tile-new .tile-inner {
   -webkit-animation: appear 200ms ease 100ms;
   -moz-animation: appear 200ms ease 100ms;
@@ -512,6 +518,21 @@ hr {
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
 
+ .tile-inner:hover {
+
+    /* Webkit for Chrome and Safari */
+    -webkit-transform: scale(1.6, 1.6); // This is the enlarged size scale of the image.
+
+   
+    /* Webkit for Mozila Firefox */
+    -moz-transform: scale(1.6, 1.6);
+
+   
+    /* Webkit for IE( Version: 11, 10 ) */
+    -ms-transform: scale(1.60, 1.60);
+
+  }
+
 @-webkit-keyframes pop {
   0% {
     -webkit-transform: scale(0);
@@ -519,9 +540,9 @@ hr {
     transform: scale(0); }
 
   50% {
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    transform: scale(2); }
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    transform: scale(1.7); }
 
   100% {
     -webkit-transform: scale(1);
@@ -534,9 +555,9 @@ hr {
     transform: scale(0); }
 
   50% {
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    transform: scale(2); }
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    transform: scale(1.7); }
 
   100% {
     -webkit-transform: scale(1);
@@ -549,9 +570,9 @@ hr {
     transform: scale(0); }
 
   50% {
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    transform: scale(2); }
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    transform: scale(1.7); }
 
   100% {
     -webkit-transform: scale(1);
@@ -564,16 +585,24 @@ hr {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    transform: scale(1.5); } 
   100% {
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    transform: scale(2); } }
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  transform: scale(2); }
+  }
 @-moz-keyframes zoomin {
   0% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); }
-
+  50% {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  transform: scale(1.5); }
   100% {
     -webkit-transform: scale(2);
     -moz-transform: scale(2);
@@ -583,6 +612,10 @@ hr {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    transform: scale(1.5); }
   100% {
     -webkit-transform: scale(2);
     -moz-transform: scale(2);
@@ -595,7 +628,8 @@ hr {
   animation: pop 400ms ease 100ms;
   -webkit-animation-fill-mode: backwards;
   -moz-animation-fill-mode: backwards;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards; 
+}
 
 .above-game:after {
   content: "";
