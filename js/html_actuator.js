@@ -4,6 +4,7 @@ function HTMLActuator() {
   this.bestContainer    = document.querySelector(".best-container");
   this.messageContainer = document.querySelector(".game-message");
   this.sharingContainer = document.querySelector(".score-sharing");
+  this.messengerBoxes   = document.querySelector(".messenger-box");
 
   this.score = 0;
 }
@@ -18,6 +19,9 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
       column.forEach(function (cell) {
         if (cell) {
           self.addTile(cell);
+            if (cell.mergedFrom) {
+          self.showMessenger(cell.mergedFrom);
+           }
         }
       });
     });
@@ -51,6 +55,15 @@ HTMLActuator.prototype.clearContainer = function (container) {
   }
 };
 
+HTMLActuator.prototype.showMessenger = function (merged) {
+    /*var self = this,
+        wrapper = self.messengerBoxes[0];
+    merged.forEach(function (mergedTile) {
+     self.applyClasses(wrapper, "messenger-box-slide-in");    
+    });
+*/
+};
+
 HTMLActuator.prototype.addTile = function (tile) {
   var self = this;
 
@@ -82,7 +95,7 @@ HTMLActuator.prototype.addTile = function (tile) {
     // Render the tiles that merged
     tile.mergedFrom.forEach(function (merged) {
       self.addTile(merged);
-      //console.log('merged!');
+      console.log(merged);
     });
   } else {
     classes.push("tile-new");

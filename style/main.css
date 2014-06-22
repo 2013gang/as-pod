@@ -2,20 +2,47 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
+  background: orange;
   color: #776e65;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
 
 body {
-  margin: 80px 0; }
+  margin: 80px 0; 
+}
+
 
 .left-panel {
   float: left;
+
 }
 
+/*
+  can not figour out a better way to do the positioning since
+  legacy styles are bad
+*/
 .right-panel {
   float: right;
+    position: relative;
+  top: -1000px;
+  left: -300px;
+}
+
+.messenger-box-slide-in {
+  position: absolute;
+    right: 30px;
+    color: red;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    color: rgba(119, 110, 101, 0.9);
+    z-index: 100;
+    -webkit-animation: move-up 600ms ease-in;
+    -moz-animation: move-up 600ms ease-in;
+    animation: move-up 600ms ease-in;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both; }
 }
 
 input {
